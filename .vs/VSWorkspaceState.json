@@ -1,23 +1,19 @@
 {
+  "ExpandedNodes": [
+    ""
+  ],
+  "SelectedNode": "\\tclap-beta.sln",
+  "PreviewInSolutionExplorer": false,
+  "ActiveTargetSystem": "WSL: Ubuntu",
+  "DevContainersInfoBarHidden": true,
   "OutputFoldersPerTargetSystem": {
     "Máquina local": [
       "out\\build\\x64-Debug",
       "out\\install\\x64-Debug"
+    ],
+    "WSL: Ubuntu": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
     ]
-  },
-  "ExpandedNodes": [
-    "",
-    "\\.github",
-    "\\.github\\workflows",
-    "\\external",
-    "\\external\\OpenCL-CLHPP",
-    "\\external\\OpenCL-CLHPP\\cmake",
-    "\\external\\OpenCL-CLHPP\\docs",
-    "\\samples",
-    "\\samples\\extensions",
-    "\\test",
-    "\\test\\cmake"
-  ],
-  "SelectedNode": "\\.github\\workflows\\release.yml",
-  "PreviewInSolutionExplorer": false
+  }
 }
