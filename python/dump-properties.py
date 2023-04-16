@@ -27,7 +27,7 @@ def print_info(obj, info_cls):
                 try:
                     print(f"{info_name}: {info_value}")
                 except Exception:
-                    print("%s: <error>" % info_name)
+                    print(f"{info_name}: <error>")
 
 
 for platform in cl.get_platforms():

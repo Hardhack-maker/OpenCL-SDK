@@ -169,6 +169,7 @@ def benchmark_transpose():
     mem_bandwidths = {}
 
     methods = [SillyTranspose, NaiveTranspose, TransposeWithLocal]
+    count = 12
     for cls in methods:
         name = cls.__name__.replace("Transpose", "")
 
@@ -183,14 +184,10 @@ def benchmark_transpose():
             a_t_buf = cl.Buffer(ctx, mf.WRITE_ONLY, size=source.nbytes)
             method = cls(ctx)
 
-            for i in range(4):
+            for _ in range(4):
                 method(queue, a_t_buf, a_buf, source.shape)
 
-            count = 12
-            events = []
-            for i in range(count):
-                events.append(method(queue, a_t_buf, a_buf, source.shape))
-
+            events = [method(queue, a_t_buf, a_buf, source.shape) for _ in range(count)]
             events[-1].wait()
             time = sum(evt.profile.end - evt.profile.start for evt in events)
 
